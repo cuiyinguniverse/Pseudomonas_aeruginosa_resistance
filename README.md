@@ -22,17 +22,23 @@ Step 1 Genome download using Ubuntu/linux scripts
 
 Step 2 Data processing using Python and Ubuntu/linux scripts
 
-• 2.1 Run the following python script to compare the homology of the unzipped protein fasta format file.
+• 2.1 Run the following Python script to compare the homology of the unzipped protein fasta format file.
 
+    python blastp.py
+or
     nohup python blastp.py &
 
-• 2.2 Run the following script to write each mutated gyrA, gyrB, nfxB and mexR amino acid sequence and its corresponding reference sequence to the corresponding file directory in fasta format, and use clustalw2 for double sequence alignment.
-
-    nohup python rewrite_sequence.py &
+• 2.2 Rewriting each mutated gyrA, gyrB, nfxB and mexR amino acid sequence and its corresponding reference sequence to the corresponding file directory in fasta format using the Python script, rewrite_sequence.py. Use clustalw2 for double sequence alignment.
 
     bash clustalw2.sh
 
 • 2.3 According to the sequence alignment results of clustalw2, the mutation sites and amino acid residues were calculated by using Python script.
 
+    python calculate_mutation_sites.py 
+or
     nohup python calculate_mutation_sites.py &
+
+• 2.4 The results of mutation sites and amino acid residues calculated by Python script in step 2.3 are counted according to clinical and non-clinical, and the sequences without mutation are classified and counted according to clinical and non-clinical, so as to obtain a 2X2 contingency table.
+
+Step 3 Data visualization and statistics
 
