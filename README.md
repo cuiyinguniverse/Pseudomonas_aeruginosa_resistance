@@ -26,6 +26,7 @@ Step 2 Data processing using Python and Ubuntu/linux scripts
 
     python blastp.py
 or
+    
     nohup python blastp.py &
 
 • 2.2 Rewriting each mutated gyrA, gyrB, nfxB and mexR amino acid sequence and its corresponding reference sequence to the corresponding file directory in fasta format using the Python script, rewrite_sequence.py. Use clustalw2 for double sequence alignment.
@@ -36,6 +37,7 @@ or
 
     python calculate_mutation_sites.py 
 or
+    
     nohup python calculate_mutation_sites.py &
 
 • 2.4 The results of mutation sites and amino acid residues calculated by Python script in step 2.3 are counted according to clinical and non-clinical, and the sequences without mutation are classified and counted according to clinical and non-clinical, so as to obtain a 2X2 contingency table.
