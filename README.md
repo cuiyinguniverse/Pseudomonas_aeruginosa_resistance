@@ -12,27 +12,27 @@ Requirement:
 
 Step 1 Genome download using Ubuntu/linux scripts
 
-    • 1.1 Run the following script to download the protein sequences of Pseudomonas aeruginosa from the NCBI database(https://www.ncbi.nlm.nih.gov/). Only complete genomes are downloaded and included for downstream analysis.
+• 1.1 Run the following script to download the protein sequences of Pseudomonas aeruginosa from the NCBI database(https://www.ncbi.nlm.nih.gov/). Only complete genomes are downloaded and included for downstream analysis.
 
-bash download.sh
+    bash download.sh
 
-    • 1.2 Run the following script to unzip the protein sequence file of Pseudomonas aeruginosa.
+• 1.2 Run the following script to unzip the protein sequence file of Pseudomonas aeruginosa.
 
-bash decompression.sh
+    bash decompression.sh
 
 Step 2 Data processing using Python and Ubuntu/linux scripts
 
-    • 2.1 Run the following python script to compare the homology of the unzipped protein fasta format file.
+• 2.1 Run the following python script to compare the homology of the unzipped protein fasta format file.
 
-nohup python blastp.py &
+    nohup python blastp.py &
 
-    • 2.2 Run the following script to write each mutated gyrA, gyrB, nfxB and mexR amino acid sequence and its corresponding reference sequence to the corresponding file directory in fasta format, and use clustalw2 for double sequence alignment.
+• 2.2 Run the following script to write each mutated gyrA, gyrB, nfxB and mexR amino acid sequence and its corresponding reference sequence to the corresponding file directory in fasta format, and use clustalw2 for double sequence alignment.
 
-nohup python rewrite_sequence.py &
+    nohup python rewrite_sequence.py &
 
-bash clustalw2.sh
+    bash clustalw2.sh
 
-    • 2.3 According to the sequence alignment results of clustalw2, the mutation sites and amino acid residues were calculated by using Python script.
+• 2.3 According to the sequence alignment results of clustalw2, the mutation sites and amino acid residues were calculated by using Python script.
 
-nohup python calculate_mutation_sites.py &
+    nohup python calculate_mutation_sites.py &
 
