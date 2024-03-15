@@ -1,7 +1,13 @@
 # Pseudomonas aeruginosa resistance
 It was used to calculate the prevalence of combinations of mutations associated with fluoroquinolone antibiotic resistance in clinical and environmental strains of Pseudomonas aeruginosa.
 
-Pseudomonas aeruginosa is an important opportunistic pathogen that usually causes long-term infection in immunocompromised patients. Fluoroquinolone antibiotics have been widely used in clinical practice for a long time to treat infections caused by Pseudomonas aeruginosa. We show through laboratory evolution that Pseudomonas aeruginosa PAO1 exposed to different levels of fleroxacin can rapidly select for highly resistant mutants carrying multi-step mutations. The combination of mutations in DNA gyrase (gyrA/gyrB) and negative regulator of the efflux pump (nfxB/mexR) results in high resistance. Here, we downloaded the protein sequences corresponding to the complete genome assembly level of Pseudomonas aeruginosa from the NCBI database. The amino acid sequences of GyrA, GyrB, NfxB and MexR of Pseudomonas aeruginosa PAO1 were used as reference sequences. Diamond blastp was used for homology alignment (identity>50%, coverage>80%, E-value=1E-5). The sequences were classified according to the source: clinical and non-clinical according to the annotation information in the NCBI database. The mutated amino acid sequences of GyrA, GyrB, NfxB and MexR were compared with their corresponding reference amino acid sequences by clustalw2. The Python script was used to calculate the mutation sites and amino acid residues, and the results were classified. The classification results were then subjected to Fisher's exact test for visualization and other analyses.
+Pseudomonas aeruginosa is an important conditional pathogen, which often causes long-term infection in patients with low immune function. 
+Fluoroquinolone antibiotics have long been widely used in the treatment of clinical infection caused by Pseudomonas aeruginosa. 
+Our laboratory evolution shows that Pseudomonas aeruginosa PAO1 can quickly select highly resistant mutants with multiple mutations under different levels of fleroxacin exposure. 
+The mutant combination of DNA gyrase (gyrA/gyrB) and efflux pump negative regulator (nfxB/mexR) leads to high drug resistance. 
+Here, we downloaded the corresponding protein sequences of the complete genome assembly level of Pseudomonas aeruginosa from the NCBI database, taking the GyrA, GyrB, NfxB and MexR amino acid sequences of Pseudomonas aeruginosa PAO1 as reference sequences, using Diamond blastp for homologous alignment (identity > 50%, coverage > 80%, E-value=1E-5). According to the annotation information in the NCBI database, these sequences are classified by source: clinical and non-clinical. 
+The mutated amino acid sequences of GyrA, GyrB, NfxB and MexR were compared with their corresponding reference amino acid sequences by clustalw2. The mutated sites and amino acid residues were calculated by Python script, and the results were counted according to clinical and non-clinical classification. At the same time, a series of 2 × 2 contingency tables were obtained. 
+Fisher's exact test these contingency tables for visualization and other analysis.
 
 Citation:Efflux pump-related mutations dictate the multi-step evolution of high-level resistance to fluoroquinolone in Pseudomonas aeruginosa.
 
@@ -40,7 +46,10 @@ or
     
     nohup python calculate_mutation_sites.py &
 
-• 2.4 The results of mutation sites and amino acid residues calculated by Python script in step 2.3 are counted according to clinical and non-clinical, and the sequences without mutation are classified and counted according to clinical and non-clinical, so as to obtain a 2X2 contingency table.
+• 2.4 The results of mutation sites and amino acid residues calculated by Python script in step 2.3 are counted according to clinical and non-clinical, and the sequences without mutation are classified and counted according to clinical and non-clinical, so as to obtain a series of 2×2 contingency tables.
 
 Step 3 Data visualization and statistics
+
+• 3.1 According to the data in these 2 × 2 contingency tables, the frequency of functional loss mutations and their combinations of DNA gyrase (gyrA/gyrB) and efflux pump negative regulatory factor (nfxB/mexR) were calculated, indicating whether these types of mutations are widespread in evolution. 
+These series of 2 × 2 contingency tables were performed by Fisher's exact test respectively to determine whether the functional loss mutations of DNA gyrase (gyrA/gyrB) and efflux pump negative regulatory factor (nfxB/mexR) and their combinations were significantly enriched in clinic according to P-value.
 
