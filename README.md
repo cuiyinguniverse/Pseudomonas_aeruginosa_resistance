@@ -51,5 +51,5 @@ or
 Step 3 Data visualization and statistics
 
 • 3.1 According to the data in these 2 × 2 contingency tables, the frequency of functional loss mutations and their combinations of DNA gyrase (gyrA/gyrB) and efflux pump negative regulatory factor (nfxB/mexR) were calculated, indicating whether these types of mutations are widespread in evolution. 
-These series of 2 × 2 contingency tables were performed by Fisher's exact test respectively to determine whether the functional loss mutations of DNA gyrase (gyrA/gyrB) and efflux pump negative regulatory factor (nfxB/mexR) and their combinations were significantly enriched in clinic according to P-value.
+These series of 2 × 2 contingency tables were performed by Fisher's exact test respectively to determine whether the functional loss mutations of DNA gyrase (gyrA/gyrB) and efflux pump negative regulatory factor (nfxB/mexR) and their combinations were significantly enriched in clinical according to P-value.
 
