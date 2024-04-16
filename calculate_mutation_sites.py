@@ -1,6 +1,6 @@
-#####According to the sequence alignment results of clustalw2, calculating amino acid mutation sites#####
-from Bio import AlignIO
+#According to the sequence alignment results of clustalw2, calculating amino acid mutation sites, and writing to a comma-separated values format file.
 
+from Bio import AlignIO
 import pandas as pd
 
 def mutation_site(i):
