@@ -26,17 +26,17 @@ Step 1 Genome download using linux shell scripts
 
     bash decompression.sh
 
-Step 2 Data processing using Jupyter notebook and linux shell scripts
+Step 2 Data processing using Jupyter Notebook and linux shell scripts
 
-• 2.1 Run the Jupyter notebook script blastp.ipynb to compare the homology of the unzipped protein fasta format file.
+• 2.1 Run the Jupyter Notebook script blastp.ipynb to compare the homology of the unzipped protein fasta format file.
 
-• 2.2 Rewriting each mutated gyrA, gyrB, nfxB and mexR amino acid sequence and its corresponding reference sequence to the corresponding file directory in fasta format using the Jupyter notebook script, rewrite_sequence.ipynb. Using clustalw2 for double sequence alignment.
+• 2.2 Rewriting each mutated gyrA, gyrB, nfxB and mexR amino acid sequence and its corresponding reference sequence to the corresponding file directory in fasta format using the Jupyter Notebook script, rewrite_sequence.ipynb. Using clustalw2 for double sequence alignment.
 
     bash clustalw2.sh
 
-• 2.3 According to the sequence alignment results of clustalw2, the mutation sites and amino acid residues were calculated by using Jupyter notebook script calculate_mutation_sites.ipynb.
+• 2.3 According to the sequence alignment results of clustalw2, the mutation sites and amino acid residues were calculated by using Jupyter Notebook script calculate_mutation_sites.ipynb.
 
-• 2.4 The results of mutation sites and amino acid residues calculated by Jupyter notebook script in step 2.3 are counted according to clinical and non-clinical, and the sequences without mutation are classified and counted according to clinical and non-clinical, so as to obtain a series of 2×2 contingency tables.
+• 2.4 The results of mutation sites and amino acid residues calculated by Jupyter Notebook script in step 2.3 are counted according to clinical and non-clinical, and the sequences without mutation are classified and counted according to clinical and non-clinical, so as to obtain a series of 2×2 contingency tables.
 
 Step 3 Data visualization and statistics
 
