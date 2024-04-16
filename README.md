@@ -36,10 +36,11 @@ Step 2 Data processing using Jupyter notebook and linux shell scripts
 
 • 2.3 According to the sequence alignment results of clustalw2, the mutation sites and amino acid residues were calculated by using Jupyter notebook script calculate_mutation_sites.ipynb.
 
-• 2.4 The results of mutation sites and amino acid residues calculated by Python script in step 2.3 are counted according to clinical and non-clinical, and the sequences without mutation are classified and counted according to clinical and non-clinical, so as to obtain a series of 2×2 contingency tables.
+• 2.4 The results of mutation sites and amino acid residues calculated by Jupyter notebook script in step 2.3 are counted according to clinical and non-clinical, and the sequences without mutation are classified and counted according to clinical and non-clinical, so as to obtain a series of 2×2 contingency tables.
 
 Step 3 Data visualization and statistics
 
-• 3.1 According to the data in these 2 × 2 contingency tables, the frequency of functional loss mutations and their combinations of DNA gyrase (gyrA/gyrB) and efflux pump negative regulatory factor (nfxB/mexR) were calculated, indicating whether these types of mutations are widespread in evolution. 
+• 3.1 According to the data in these 2 × 2 contingency tables, the frequency of functional loss mutations and their combinations of DNA gyrase (gyrA/gyrB) and efflux pump negative regulatory factor (nfxB/mexR) were calculated, indicating whether these types of mutations are widespread in evolution.
+
 These series of 2 × 2 contingency tables were performed by Fisher's exact test respectively to determine whether the functional loss mutations of DNA gyrase (gyrA/gyrB) and efflux pump negative regulatory factor (nfxB/mexR) and their combinations were significantly enriched in clinical according to P-value.
 
