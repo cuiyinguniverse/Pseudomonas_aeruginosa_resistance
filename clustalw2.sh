@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Using clustalw2 for double sequence alignment.
+
 ######################process management##################################
 start_time=`date +%s`              #Defining the start time of script execution.
 [ -e /tmp/fd1 ] || mkfifo /tmp/fd1 #Creating a named pipe.
