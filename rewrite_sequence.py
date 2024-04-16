@@ -1,5 +1,7 @@
 #Writing the results of diamond blastp sequence alignment to a tab-separated values format file.
+
 import os
+
 protein_names = ['gyrA','gyrB','nfxB','mexR']
 for i in protein_names:
     with open("/edisk2/yangh22/yxq_works/protein/complete_genome_level/{}.tsv".format(i.strip()),"w") as F:
@@ -7,8 +9,11 @@ for i in protein_names:
             with open("/edisk2/yangh22/protein/ncbi_dataset/data/{}/{}.blastp".format(dirs,i.strip()),"r") as f:
                 for j in f.readlines():
                     F.write(dirs + '\t' + j)
+                    
 #Converting the tab-separated values format file to a comma-separated values format file, and adding comment tags to the diamond blastp results in the column on the first line.
+
 import csv
+
 protein_names = ['gyrA','gyrB','nfxB','mexR']
 for i in protein_names:
     header = ['reference_genome_id','Query_accession_{}'.format(i.strip()),'Target_accession_{}'.format(i.strip()), \
@@ -21,8 +26,11 @@ for i in protein_names:
         with open("/edisk2/yangh22/yxq_works/protein/complete_genome_level/{}.tsv".format(i.strip()),"r") as F:
             list = [line.split() for line in F.readlines()]            
             writer.writerows(list)
+            
 #Calculating the mutation sequence and writing the result to a comma-separated values format file.
+
 import pandas as pd
+
 protein_names = ['gyrA','gyrB','nfxB','mexR']
 for i in protein_names:
     data = pd.read_csv("/edisk2/yangh22/yxq_works/protein/complete_genome_level/{}.csv".format(i.strip()))
@@ -33,8 +41,10 @@ for i in protein_names:
     j_df = pd.DataFrame(j,columns=['reference_genome_id'])
     j_df.to_csv("/edisk2/yangh22/yxq_works/protein/complete_genome_level/{}_mutation.csv".format(i.strip()),index=False)
 
-#Rewriting the mutated sequence and reference sequence to a fasta format file, and placing the file in the same subdirectory as the mutated sequence
+#Rewriting the mutated sequence and reference sequence to a fasta format file, and placing the file in the same subdirectory as the mutated sequence.
+
 from Bio import SeqIO
+
 j = 0
 protein_names = ['gyrA','gyrB','nfxB','mexR']
 for k in protein_names:
